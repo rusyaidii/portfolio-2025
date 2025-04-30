@@ -31,7 +31,7 @@ export const Header = () => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3, // section must be at least 50% in view
+      threshold: 0.3, //* section must be at least 30% in view
     };
 
     const observer = new IntersectionObserver((entries) => {

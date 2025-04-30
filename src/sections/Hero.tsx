@@ -124,7 +124,7 @@ export const HeroSection = () => {
             Enthusiastic Full Stack Developer
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hi, I'm <span className="font-semibold text-white">Rusyaidi</span> –
+            Hi, I&apos;m <span className="font-semibold text-white">Rusyaidi</span> –
             Orbiting between frontend magic and backend wizardry 🧙‍♂️, I build
             clean, scalable code and explore the far reaches of tech to solve
             real-world problems.
