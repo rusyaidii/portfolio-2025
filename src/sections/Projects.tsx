@@ -5,11 +5,12 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
     company: "Lapasar",
-    year: "2024",
+    yearStart: "June 2024",
     title: "Senior Full Stack Developer",
     results: [
       { title: "Enhanced user experience by 40%" },
@@ -21,7 +22,8 @@ const portfolioProjects = [
   },
   {
     company: "Mywam",
-    year: "2022",
+    yearStart: "April 2022",
+    yearEnd: "May 2024",
     title: "Full Stack Developer",
     results: [
       { title: "Boosted sales by 20%" },
@@ -33,7 +35,8 @@ const portfolioProjects = [
   },
   {
     company: "Quantum Dynamics",
-    year: "2023",
+    yearStart: "2023",
+    yearEnd: "2024",
     title: "AI Startup Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
@@ -47,39 +50,35 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="experience">
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center text-transparent bg-clip-text">
-            Real-world Results
+            Real-world Experience
           </p>
         </div>
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          Featured Experienced
+          Professional Journey
         </h2>
         <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-          See how I transformed concepts into engaging digital experiences.
+        Explore key roles where I built scalable applications, collaborated with teams, and delivered real-world results.
         </p>
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
-          {portfolioProjects.map((project) => (
-            <div
+          {portfolioProjects.map((project, index) => (
+            <Card
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none"
+              className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16"
+              style={{
+                top: `calc(64px + ${index * 40}px)`,
+              }}
             >
-              <div
-                className="absolute inset-0 -z-10 opacity-5"
-                style={{
-                  backgroundImage: `url(${grainImage.src})`,
-                }}
-              ></div>
-
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text inline-flex gap-2 font-bold uppercase tracking-widest text-sm">
                     <span>{project.company}</span>
                     <span>&bull;</span>
-                    <span>{project.year}</span>
+                    <span>{`${project.yearStart} - ${project.yearEnd ?? 'Present'}`}</span>
                   </div>
                   <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
                     {project.title}
@@ -113,7 +112,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
