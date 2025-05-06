@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import bookImage from "@/assets/images/book-cover.png";
-import mapImage from "@/assets/images/map.png";
+import mapImage from "@/assets/images/map-3.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 
 import VueIcon from "@/assets/icons/square-js.svg";

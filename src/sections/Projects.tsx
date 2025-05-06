@@ -1,5 +1,5 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import lapasarLandingPage from "@/assets/images/lapasar-landing-page.png";
+import mywamLandingPage from "@/assets/images/mywam-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -17,8 +17,8 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://borong.lapasar.com/",
+    image: lapasarLandingPage,
   },
   {
     company: "Mywam",
@@ -30,21 +30,8 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    yearStart: "2023",
-    yearEnd: "2024",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://xhealth.com.my/",
+    image: mywamLandingPage,
   },
 ];
 
@@ -75,11 +62,10 @@ export const ProjectsSection = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text inline-flex gap-2 font-bold uppercase tracking-widest text-sm">
+                  <div className="flex flex-col md:flex-row bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text gap-2 font-bold uppercase tracking-widest text-sm">
                     <span>{project.company}</span>
-                    <span>&bull;</span>
-                    <span>{`${project.yearStart} - ${project.yearEnd ?? 'Present'}`}</span>
                   </div>
+                  <span className="text-sm text-white/50">{`${project.yearStart} - ${project.yearEnd ?? 'Present'}`}</span>
                   <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
                     {project.title}
                   </h3>
