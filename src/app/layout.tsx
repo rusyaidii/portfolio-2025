@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   description: "A portfolio showcasing my work as a Full Stack Developer, including B2B logistics platforms, web applications, and technical expertise in VueJS, NestJS, and more.",
   keywords: "Rusyaidi Mizi, Portfolio, Full Stack Developer, VueJS, NestJS, ReactJS, Web Development, B2B Logistics, Software Engineering, Web APIs, JavaScript, TypeScript, MongoDB, GraphQL",
   authors: [{ name: "Rusyaidi" }],
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
 };
 
