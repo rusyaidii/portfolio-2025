@@ -9,13 +9,14 @@ import bookImage from "@/assets/images/book-cover.png";
 import mapImage from "@/assets/images/map-3.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 
-import VueIcon from "@/assets/icons/square-js.svg";
+import VueIcon from "@/assets/icons/vuejs.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import NestIcon from "@/assets/icons/html5.svg";
-import DotNetIcon from "@/assets/icons/css3.svg";
-import RedisIcon from "@/assets/icons/chrome.svg";
-import NatsIcon from "@/assets/icons/github.svg";
-import MongoIcon from "@/assets/icons/square-js.svg";
+import NestIcon from "@/assets/icons/nestjs.svg";
+import DotNetIcon from "@/assets/icons/dotnet.svg";
+import RedisIcon from "@/assets/icons/redis.svg";
+import NatsIcon from "@/assets/icons/nats-io.svg";
+import MongoIcon from "@/assets/icons/mongodb.svg";
+import GraphQLIcon from "@/assets/icons/graphql.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { useRef } from "react";
@@ -46,6 +47,10 @@ const toolboxItems = [
     iconType: NatsIcon,
   },
   {
+    title: "GraphQL",
+    iconType: GraphQLIcon,
+  },
+  {
     title: "MongoDB",
     iconType: MongoIcon,
   },
@@ -53,8 +58,8 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Tech Exploration",
+    emoji: "🧪",
     top: "5%",
     left: "5%",
   },
@@ -62,7 +67,7 @@ const hobbies = [
     title: "Hiking",
     emoji: "🥾",
     top: "5%",
-    left: "50%",
+    left: "60%",
   },
   {
     title: "Gaming",
@@ -93,6 +98,12 @@ const hobbies = [
     emoji: "💃",
     top: "70%",
     left: "45%",
+  },
+  {
+    title: "Cooking",
+    emoji: "🍳",
+    top: "25%",
+    left: "55%",
   },
 ];
 

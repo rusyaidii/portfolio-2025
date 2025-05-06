@@ -12,10 +12,12 @@ const portfolioProjects = [
     company: "Lapasar",
     yearStart: "June 2024",
     title: "Senior Full Stack Developer",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+    description: [
+      "Spearheaded development of a scalable B2B logistics platform using VueJS, NestJS, GraphQL, NATS, and Redis.",
+      "Integrated secure Maybank Financial systems for seamless payment processing.",
+      "Collaborated with cross-functional teams to align tech with business goals.",
+      "Optimized performance using Redis caching and NATS messaging.",
+      "Enhanced engineering processes by implementing modern best practices."
     ],
     link: "https://borong.lapasar.com/",
     image: lapasarLandingPage,
@@ -25,10 +27,12 @@ const portfolioProjects = [
     yearStart: "April 2022",
     yearEnd: "May 2024",
     title: "Full Stack Developer",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+    description: [
+      "Developed 70+ Web APIs with C# .NET and built ReactJS frontends using Redux.",
+      "Created reusable components for clean, maintainable code.",
+      "Led development of major modules: Patient Transfer, QR Attendance, SSO integration, and more.",
+      "Resolved critical customer issues, saving RM10,000 in subscriptions.",
+      "Mentored 2 junior devs and managed Dockerize environments across dev and live servers."
     ],
     link: "https://xhealth.com.my/",
     image: mywamLandingPage,
@@ -71,13 +75,13 @@ export const ProjectsSection = () => {
                   </h3>
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results.map((result, index) => (
+                    {project.description.map((item, index) => (
                       <li
                         key={index}
                         className="flex gap-2 text-sm md:text-base text-white/50"
                       >
                         <CheckCircleIcon className="size-5 md:size-6" />
-                        <span>{result.title}</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
